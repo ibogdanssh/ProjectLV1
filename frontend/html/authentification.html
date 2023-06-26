@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/output.css">
+    </head>
+    <body class="w-screen h-screen bg-gray-yes flex justify-center items-center">
+
+        <div class="w-3/4 h-3/4 flex flex-row max-sm:absolute max-sm:left-1/4 max-md1:ml-16">
+            <div class="w-1/2 h-full bg-white rounded-tl-lg rounded-bl-lg">
+                <span class="absolute mt-3.5 ml-3 h-1.5 w-1.5 rounded-full bg-black"></span><p class="absolute text-xs mt-2 ml-6">Website V1</p>
+                <p class="absolute text-xs mt-16 ml-3 top-3/4"><span class="mr-0.5">&copy;</span>Constantin Bogdan-Teodor 2023</p>
+                <div class="flex justify-center items-center w-full h-full flex-col">
+                    <h1 class="text-4xl">Welcome back!</h1>
+                    <p class="text-sm text-gray-500">Welcome back to our website, please sign in!</p>
+                    <form class="mt-5" method="post">
+                        <!-- ! EMAIL -->
+                        <label for="email">Email</label><br>
+                        <input class="text-center w-96 h-10 border-2 border-solid border-black rounded-lg placeholder:absolute placeholder:left-28" type="text"  placeholder="Please enter your email!" id="email" name="email" required><br>
+                        <!-- ! EMAIL -->
+                        
+                        <!-- ! PASSWORD  -->
+                        <label for="password">Password</label><br>
+                        <input class="text-center w-96 h-10 border-2 border-solid border-black rounded-lg placeholder:absolute placeholder:left-24" type="password" placeholder="Please enter your password!" id="password" name="password" required><br>
+                        <!-- ! PASSWORD  -->
+
+                        <!-- ! Remember ACCOUNT -->
+                        <input class="w-3 h-3 mt-3" type="checkbox" id="rememberAccount" name="rememberAccount">
+                        <label class="text-sm">Remember account for 14 days.</label>
+                        <!-- ! Remember ACCOUNT -->
+
+                        <!-- ! FORGOT PASSWORD AND SIGN IN BUTTON -->
+                        <a class="absolute text-sm mt-2 ml-8 text-purple-700" href="#">Forgot the password!</a><br>
+                        <button class=" w-96 h-10 bg-purple-700 text-white mt-5 rounded-lg">Sign in</button><br>
+                        <button class=" w-96 h-10 bg-white text-black border-2 border-solid mt-3 rounded-lg"><img class="w-6 h-6 absolute ml-24" src="../img/googleIcon.png">Sign in with Google</button><br>
+                        <!-- ! FORGOT PASSWORD AND SIGN IN BUTTON -->
+
+                        
+                        <p class="w-96 h-10 text-center mt-3">Don't have an account?<a href="./registerAuth.html" class="ml-3 text-purple-900 font-bold" href="#">Sign up</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="w-1/2 h-full bg-gray-no rounded-tr-lg rounded-br-lg max-sm:hidden min-h-min	min-height: min-content;">
+                <div class="relative top-0 w-full h-1/2 z-10">
+                    <div class="w-72 h-72 bg-purple-800 rounded-full absolute top-36 left-1/4 ml-5 z-0"></div>
+                    <div class="w-72 h-72 bg-purple-800 rounded-full absolute top-36 mt-5 left-1/4 ml-5 blur-sm z-10"></div>
+                </div>
+                <div class="relative w-full h-1/2 bg-gray-300 blur-sm z-10 opacity-70"></div>
+            </div>
+        </div>
+        
+        <script src="../script/authentification.js" async defer></script>
+    </body>
+</html>
