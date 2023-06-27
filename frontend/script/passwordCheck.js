@@ -43,47 +43,40 @@ let checkSpecial = (password) => {
 }
 
 
+let changeText = (div, password) => {
+    div.style.display = 'block';
+    password.style.color = 'red';
+    password.style.textDecoration = "none";
+
+    return 0;
+};
+
+let changeTextV2 = (password) => {
+    password.style.textDecoration = 'line-through';
+    password.style.color = 'green';
+    return 1;
+}
 
 
 signUp.addEventListener("click", () => {
-    if(!checkLength(password)) {
-        divPassword.style.display = "block";
-        passwordLength.style.textDecoration = "none";
-        passwordLength.style.color = 'red';
-        check.length = 0;
-        
-    }
-    else{
-        passwordLength.style.textDecoration = 'line-through';
-        passwordLength.style.color = 'green';
-        check.length = 1;
-    }
+    if(!checkLength(password))
+        check.length = changeText(divPassword, passwordLength);
+    else
+        check.length = changeTextV2(passwordLength);
     
-    if(!checkNumbers(password)) {
-        divPassword.style.display = "block";
-        passwordNumber.style.textDecoration = 'none';
-        passwordNumber.style.color = 'red';
-        check.numbers = 0;
-    }
-    else {
-        passwordNumber.style.textDecoration = 'line-through';
-        passwordNumber.style.color = 'green';
-        check.numbers = 1;
-    }
-    if(!checkSpecial(password)) {
-        divPassword.style.display = "block";
-        passwordSpecial.style.textDecoration = 'none';
-        passwordSpecial.style.color = 'red';
-        check.special = 0;
-    }
-    else {
-        passwordSpecial.style.textDecoration = 'line-through';
-        passwordSpecial.style.color = 'green';
-        check.special = 1;
-    }
+    if(!checkNumbers(password))
+        check.numbers = changeText(divPassword, passwordNumber);
+    else 
+        check.numbers = changeTextV2(passwordNumber);
+
+    if(!checkSpecial(password)) 
+        check.special = changeText(divPassword, passwordSpecial);
+    else 
+        check.special = changeTextV2(passwordSpecial);
 
 
     if(check.special && check.numbers && check.length)
         divPassword.style.display = 'none';
+
     
 })
